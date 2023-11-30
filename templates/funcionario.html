@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="subtitulo">
+    <h2>Adicionar Funcionário</h2>
+</div>
+<div class="digite_info">
+    <form method="POST">
+        <label for="primeiro_nome">Primeiro Nome:</label><br>
+        <input type="text" name="primeiro_nome" required><br>
+        <label for="sobrenome">Sobrenome:</label><br>
+        <input type="text" name="sobrenome" required><br>
+        <label for="data_admissao">Data de Admissão:</label><br>
+        <input type="date" name="data_admissao" required><br>
+        <label for="status_funcionario">Status do Funcionário:</label><br>
+        <input type="checkbox" name="status_funcionario"><br>
+        <label for="id_setor">ID do Setor:</label><br>
+        <input type="text" name="id_setor" required><br>
+        <label for="id_cargo">ID do Cargo:</label><br>
+        <input type="text" name="id_cargo" required>
+        <div class="botao">
+            <input type="submit" value="Adicionar">
+        </div>
+    </form>
+</div>
+{% endblock %}

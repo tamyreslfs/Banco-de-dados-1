@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="subtitulo">
+    <h2>Adicionar Setor</h2>
+</div class="digite_info">
+
+<div class="botao">
+    <form method="POST">
+        <label for="nome">Nome do Setor:</label><br>
+        <input type="text" name="nome" required>
+        <div class="botao">
+            <input type="submit" value="Adicionar">
+        </div>
+    </form>
+</div>
+{% endblock %}

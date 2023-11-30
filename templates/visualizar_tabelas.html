@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualizar Tabelas</title>
+</head>
+<body>
+    <h1>Tabela Setor</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+        {% for setor in setores %}
+        <tr>
+            <td>{{ setor.id }}</td>
+            <td>{{ setor.nome }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Tabela Cargos</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>ID do Setor</th>
+        </tr>
+        {% for cargo in cargos %}
+        <tr>
+            <td>{{ cargo.id }}</td>
+            <td>{{ cargo.nome }}</td>
+            <td>{{ cargo.id_setor }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Tabela Funcionários</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Primeiro Nome</th>
+            <th>Sobrenome</th>
+            <th>Data de Admissão</th>
+            <th>Status do Funcionário</th>
+            <th>ID do Setor</th>
+            <th>ID do Cargo</th>
+        </tr>
+        {% for funcionario in funcionarios %}
+        <tr>
+            <td>{{ funcionario.id }}</td>
+            <td>{{ funcionario.primeiro_nome }}</td>
+            <td>{{ funcionario.sobrenome }}</td>
+            <td>{{ funcionario.data_admissao }}</td>
+            <td>{{ funcionario.status_funcionario }}</td>
+            <td>{{ funcionario.id_setor }}</td>
+            <td>{{ funcionario.id_cargo }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

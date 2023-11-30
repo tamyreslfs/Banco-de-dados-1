@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Organize</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body >
+    <div class="principal" style="background-image: url(templates/fundo.jpg);">
+    <div class="titulo_adicionar">
+        <h1>Inclusão de Setor/ Cargo/ Funcionário</h1>
+    </div>
+    <div class="adicionar">
+        <ul>
+            <li><a href="{{ url_for('adicionar_setor') }}">Adicione Setor</a></li>
+            <li><a href="{{ url_for('adicionar_cargo') }}">Adicione Cargo</a></li>
+            <li><a href="{{ url_for('adicionar_funcionario') }}">Adicione Funcionário</a></li>
+        </ul>
+    </div>
+    </div>
+    {% block content %}{% endblock %}
+   
+</body>
+</html>
